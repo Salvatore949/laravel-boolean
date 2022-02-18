@@ -1,5 +1,1 @@
-<footer>
-
-   <p>Bye fron footer</p>
-
-</footer>
+<p>bye from footer</p>

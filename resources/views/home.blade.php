@@ -1,6 +1,9 @@
-@extends('layout.main')
+@extends('layouts.main')
+
 @section('main')
 
-<postcards></postcards>
+<a href=""> CREATE NEW POSTCARD </a>
 
-@endsection('main')
+<postcard></postcard>
+
+@endsection

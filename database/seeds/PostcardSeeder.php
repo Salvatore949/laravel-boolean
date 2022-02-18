@@ -13,6 +13,6 @@ class PostcardSeeder extends Seeder
      */
     public function run()
     {
-        factory(Postcard::class, 20) ->create();
+        factory(Postcard::class, 20) -> create();
     }
 }

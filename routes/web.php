@@ -17,4 +17,13 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/','GuestController@home') -> name('home');
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/', 'GuestController@home')->name('home');
+
+//----------------------------------
+
+Route::get('/api/postcards/list', 'ApiController@getPostcards')->name('api.postcards.list');

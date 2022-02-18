@@ -1,5 +1,1 @@
-<header>
-
-   <h1>Head</h1>
-
-</header>
+<h1>Title</h1>
