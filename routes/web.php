@@ -23,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'GuestController@home')->name('home');
+Route::get('/postcard/create', 'GuestController@createPostcard') ->name('postcardcreate');
+Route::post('/postcard/store', 'GuestController@storePostcard') ->name('postcard.store');
 
 //----------------------------------
 

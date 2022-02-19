@@ -2,7 +2,7 @@
 
 @section('main')
 
-<a href=""> CREATE NEW POSTCARD </a>
+<a href="{{route('postcardcreate')}}"> CREATE NEW POSTCARD </a>
 
 <postcard></postcard>
 
