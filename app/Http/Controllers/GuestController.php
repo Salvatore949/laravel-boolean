@@ -17,7 +17,7 @@ class GuestController extends Controller
     }
 
     public function storePostcard(Request $request){
-        \Log::error("cicici");
+        // \Log::error("cicici");
         $data = $request -> validate([
             'sender' =>'required|string',
             'address' =>'required|string',
@@ -28,21 +28,19 @@ class GuestController extends Controller
 
         $imageFile =$data['image'];
 
-        $imageName = rand(100000,999999).'_'.time().  $imageFile -> getClientOriginalExtension();
-        dd($imageName);
+        $imageName = rand(100000,999999).'_'.time().  $imageFile -> getClientOriginalExtension();//nome casuale univoco assegnato all'immagine
+        // dd($imageName);
 
-        $imageFile -> storeAs('/postcards/',$imageFile -> getClientOriginalName(), 'public');
-        //$imageFile -> storeAs('/postcards/',$imageName, 'public');--2 seconda versione
+        // $imageFile -> storeAs('/postcards/',$imageFile -> getClientOriginalName(), 'public');
+        $imageFile -> storeAs('/postcards/',$imageName, 'public');
         //php artisan storage:link  mettre immagine in storage
 
-        //$data['image'] =$imageName;
-        //dd(data);
+        $data['image'] = $imageName;
+        // dd($data);
 
         //solita parte di create --4
-        //$postcard = Postcard::create($data);
-        //return redirect() ->route('home);
+        $postcard = Postcard::create($data);
+        return redirect() -> route('home');
 
-        dd($path);
-        dd($data);
     }
 }

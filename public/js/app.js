@@ -37554,7 +37554,11 @@ var render = function () {
             _vm._v(" "),
             _c("td", [_vm._v(_vm._s(postcard.text))]),
             _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(postcard.image))]),
+            _c("td", [
+              _c("img", {
+                attrs: { src: "/storage/postcards/" + postcard.image, alt: "" },
+              }),
+            ]),
           ])
         }),
       ],
